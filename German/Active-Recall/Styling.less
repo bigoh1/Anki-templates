@@ -1,0 +1,54 @@
+@import "../../config.less";
+
+/*
+ * Font-size across many parts.
+ * Usage: 
+ * | .propertyX {
+ * |   .my_font_size (); 
+ * | } 
+ *
+ */
+ .my_font_size () {
+    font-size: 1.5em;
+ }
+
+/*
+ * Field-specific
+ */
+.part-of-speech {
+    // Idk why but if I nest font-size (notice Part-Of-Speech Currently is inside Definition div block)
+    // then for some reason it becomes even bigger 
+    // .my_font_size ();
+
+    display: inline;
+	color: #d9d9d9;
+}
+
+.definition {
+    .my_font_size (); 
+}
+
+.similar {
+    .my_font_size ();
+}
+
+.sentence {
+    .my_font_size ();
+
+	margin-top: 2%;
+	margin-bottom: 2%;
+
+    color: black;
+    background-color: white;
+}
+
+.pronunciation {
+    justify-content: center;
+    width:100%;
+    display: flex;
+}
+
+.picture {
+  display: flex;
+  justify-content: center;
+}
