@@ -1,4 +1,4 @@
-@import "../../config.less";
+@import "../../Base.less";
 
 /*
  * Font-size across many parts.
@@ -12,16 +12,10 @@
     font-size: 1.5em;
  }
 
-/*
- * Field-specific
- */
-.part-of-speech {
-    // Idk why but if I nest font-size (notice Part-Of-Speech Currently is inside Definition div block)
-    // then for some reason it becomes even bigger 
-    // .my_font_size ();
 
-    display: inline;
-	color: #d9d9d9;
+.picture {
+  display: flex;
+  justify-content: center;
 }
 
 .definition {
@@ -32,23 +26,63 @@
     .my_font_size ();
 }
 
+/*
+ * Field-specific
+ */
+.part-of-speech {
+    // Idk why but if I nest font-size (notice Part-Of-Speech Currently is inside Definition div block)
+    // then for some reason it becomes even bigger 
+    // .my_font_size ();
+
+    display: inline;
+    color: #d9d9d9;
+}
+
 .sentence {
     .my_font_size ();
 
-	margin-top: 2%;
-	margin-bottom: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
 
     color: black;
     background-color: white;
 }
 
+.prefix,
+.suffix {
+    display: inline;
+    text-align: center;
+}
+
+.blank {
+    display: inline;
+    color: #e25141;
+}
+
+.user-input {
+    text-align: center;
+}
+
+.missed-word {
+    display: inline;
+    align-content: center;
+    font-weight: bold;
+    color: #e25141;
+}
+
 .pronunciation {
+    .my_font_size ();
+
     justify-content: center;
     width:100%;
     display: flex;
 }
 
-.picture {
-  display: flex;
-  justify-content: center;
+.notes {
+    color: #a4a4aa;
 }
+
+
+
+
+
