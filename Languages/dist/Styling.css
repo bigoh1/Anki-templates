@@ -6,57 +6,43 @@ html {
   overflow: scroll;
   overflow-x: scroll;
 }
-
 /* IMAGE STYLE */
 img {
   /* resizable images */
   max-width: 100%;
   max-height: 12.5em;
   height: auto;
-
   /* new image will be placed on a new line */
   display: block;
   margin: 10px;
 }
-
 .mobile img {
   max-height: 300px;
 }
-
 tr {
   font-size: 12px;
 }
-
 .replay-button svg {
   opacity: 1;
-
   position: fixed;
   right: 0;
   bottom: 0;
   width: 4%;
   height: 4%;
 }
-
 /* 
  * Styling for bold-underline-italic-link 
  */
-
-// BOLD STYLE
 b {
   color: IndianRed !important;
 }
-
-// UNDERLINE STYLE
 u {
   text-decoration: #5eb3b3 wavy underline;
   text-decoration-thickness: 0.093em;
 }
-// ITALICS STYLE
 i {
   color: LightGreen;
 }
-
-// LINK STYLE
 a {
   color: #a09cff !important;
   text-decoration-line: underline !important;
@@ -64,44 +50,26 @@ a {
   font-style: normal;
   font-weight: bold;
 }
-
 /* Color links in red */
-// a:link,
-// a:visited,
-// a:hover,
-// a:active {
-//     color: red;
-//     text-decoration: none;
-// }
-
 .box {
   background-color: #191a1c;
-
   border-radius: 0.3em;
   margin: 0.6vw 0.6vw;
   width: 100%;
   box-sizing: border-box;
   padding: 1vw 2vw;
 }
-
 /* The whole card */
 body,
 .card {
   background-color: #2c2c2c;
-
   /* Text */
-  font-family:
-    San Francisco,
-    "Noto Sans KR",
-    Helvetica,
-    Arial;
+  font-family: San Francisco, "Noto Sans KR", Helvetica, Arial;
   font-size: 16px;
   text-align: left;
   color: white;
-
   padding: 1em;
 }
-
 /* STYLE TAGS TO APPEAR WHEN HOVERING OVER TOP OF CARD */
 .tags {
   color: white;
@@ -115,7 +83,65 @@ body,
   top: 0;
   right: 0;
 }
-
 .tags:hover {
   opacity: 1;
+}
+/*
+ * Font-size across many parts.
+ * Usage: 
+ * | .propertyX {
+ * |   .my_font_size (); 
+ * | } 
+ *
+ */
+.picture {
+  display: flex;
+  justify-content: center;
+}
+.definition {
+  font-size: 1.5em;
+}
+.similar {
+  font-size: 1.5em;
+}
+/*
+ * Field-specific
+ */
+.part-of-speech {
+  display: inline;
+  color: #d9d9d9;
+}
+.sentence {
+  font-size: 1.5em;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  color: black;
+  background-color: white;
+}
+.prefix,
+.suffix {
+  display: inline;
+  text-align: center;
+}
+.blank {
+  display: inline;
+  color: #e25141;
+}
+.user-input {
+  text-align: center;
+}
+.missed-word {
+  display: inline;
+  align-content: center;
+  font-weight: bold;
+  color: #e25141;
+}
+.pronunciation {
+  font-size: 1.5em;
+  justify-content: center;
+  width: 100%;
+  display: flex;
+}
+.notes {
+  color: #a4a4aa;
 }

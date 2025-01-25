@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Anki preview</title>
+    <link rel="stylesheet" href="./Styling.css" />
+    <!-- Include external CSS file -->
+    <style>
+      body {
+        display: flex;
+        margin: 0;
+      }
+      .column {
+        flex: 1;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      .left-column {
+      }
+      .right-column {
+        border-left: 1px solid #ccc; /* Optional border between columns */
+      }
+      .horizontal-line {
+        position: relative; /* Position absolute to the parent */
+        left: 0; /* Start from the left */
+        top: 10px;
+        width: 100%; /* Full width of the parent */
+        height: 2px; /* Height of the line */
+        background-color: white; /* Color of the line */
+        transform: translateY(-50%); /* Center the line */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="column left-column">
+      <!-- Left column content goes here -->
+      <h2>Active Recognition Card</h2>
+      <h3 style="text-align: center">Front Side</h3>
+      <div class="picture">
+        <img src="./img.png" />
+      </div>
+
+      <!-- I had this box in case the question wasn't the typical «Fill in the gap» -->
+      <!-- <div class="box question">
+            <div class="part-of-speech">
+                ({{Part-of-Speech}})
+            </div>
+        </div> -->
+
+      <div class="box definition">
+        <div style="color: #27c93f; display: inline">=</div>
+        to succeed in getting something, usually after a lot of effort
+        <div class="part-of-speech">(verb)</div>
+      </div>
+
+      <div class="box similar">
+        <div style="color: #ffbd2d; display: inline">~</div>
+        achieve win gain
+      </div>
+
+      
+
+      <div class="box sentence">
+        <!--If there's prefix and/or suffix, display it and/or them-->
+        <div class="prefix">Most of our students</div>
+        <div class="blank">_______</div>
+        <div class="suffix">five ‘A’ grades in their exams.</div>
+      </div>
+
+      <!--Accept user's guess-->
+      <div style="text-align: center">[User input here]</div>
+
+      <hr id="answer" />
+      <h3 style="text-align: center">Back Side</h3>
+
+      <div class="box sentence">
+        <div class="prefix">Most of our students</div>
+        <div class="missed-word">attained</div>
+        <div class="suffix">five ‘A’ grades in their exams.</div>
+      </div>
+
+      <div class="box notes">
+        Middle English (in the senses ‘bring to justice’ and ‘reach a state’): </br>
+        from Old French ateindre, from Latin attingere, from ad- ‘at, to’ +
+        tangere ‘to touch’.
+      </div>
+
+      <!--Tags apper when hovering at the top of card-->
+      <div class="box tags">C1</div>
+    </div>
+    <div class="column right-column">
+      <h2>Passive Recognition Card</h2>
+      
+      <h3 style="text-align: center">Front Side</h3>
+
+      <div class="box sentence">
+          <div class="prefix">Most of our students </div><div class="missed-word">attained</div><div class="suffix"> five ‘A’ grades in their exams.</div>
+      </div>
+
+
+      
+      <div class="box similar">
+          <div style='color:#ffbd2d; display:inline'>~</div> achieve win gain 
+      </div>
+      <div style="text-align: center">[User input here]</div>
+
+      
+      <!--Show the question-->
+      <!-- {{FrontSide}} -->
+
+      <!--Line separator-->
+      <hr id="answer" />
+      <h3 style="text-align: center">Back Side</h3>
+
+
+    <div class="picture">
+        <img src="./img.png"/>
+    </div>
+
+
+    <div class="box definition">
+        <div style='color:#27c93f; display:inline'>=</div> to succeed in getting something, usually after a lot of effort <div class="part-of-speech"> (verb) </div>
+    </div>
+    <div class="box notes">
+        Middle English (in the senses ‘bring to justice’ and ‘reach a state’): </br>
+        from Old French ateindre, from Latin attingere, from ad- ‘at, to’ +
+        tangere ‘to touch’.
+    </div>
+
+    <!--Tags apper when hovering at the top of card-->
+    <div class="box tags">C1</div>
+    </div>
+  </body>
+</html>
