@@ -5,14 +5,20 @@
     </div>
 </div> -->
 
-
 <div class="box sentence">
-    {{#Prefix}}<div class="prefix">{{Prefix}}</div>{{/Prefix}}<div class="missed-word">{{Missed-Word}}</div>{{#Suffix}}<div class="suffix">{{Suffix}}</div>{{/Suffix}}
+  {{#Prefix}}
+  <div class="prefix">{{Prefix}}</div>
+  {{/Prefix}}
+  <div class="missed-word">{{Missed-Word}}</div>
+  {{#Suffix}}
+  <div class="suffix">{{Suffix}}</div>
+  {{/Suffix}}
 </div>
-
 
 {{#Similar}}
 <div class="box similar">
-    <div style='color:#ffbd2d; display:inline'>~</div> {{Similar}}
+  <div style="color: #ffbd2d; display: inline">~</div>
+  {{Similar}}
 </div>
 {{/Similar}}
+
