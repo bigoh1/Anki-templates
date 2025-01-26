@@ -1,3 +1,9 @@
+<!-- Source: https://forums.ankiweb.net/t/markdown-support/52895 -->
+<script
+  type="module"
+  src="https://cdn.jsdelivr.net/npm/zero-md@3?register"
+></script>
+
 <!--Show the question-->
 {{FrontSide}}
 
@@ -14,7 +20,11 @@
 
 {{#Notes}}
 <div class="box notes">
-    {{Notes}}
+  <zero-md
+    ><script type="text/markdown">
+      {{Notes}}
+    </script></zero-md
+  >
 </div>
 {{/Notes}}
 
